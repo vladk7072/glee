@@ -1,4 +1,19 @@
+html,
 body{
+  height: 100%;
+}
+
+body{
+  font-size: 16px;
+  line-height: 18px;
+  @extend %dmsans-700;
+  display: flex;
+  flex-direction: column;
+}
+main{
+  flex-grow: 1;
+}
+a{
   font-size: 16px;
   line-height: 18px;
   @extend %dmsans-700;
@@ -6,6 +21,12 @@ body{
 
 .container{
   max-width: 1800px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container2{
+  max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
