@@ -23,7 +23,7 @@
   }
   &__list-link{
     @extend %rubik-500;
-    color: #243f4d;
+    color: $title;
     font-size: 15px;
     line-height: 12px;
   }
@@ -63,7 +63,7 @@
     border-radius: 50%;
     text-align: center;
     background-color: #fff;
-    color: #243f4d;
+    color: $title;
     @extend %dmsans-400;
     font-size: 10px;
   }
@@ -221,7 +221,7 @@ footer{
     @extend %rubik-500;
     font-size: 72px;
     line-height: 70px;
-    color: #243f4d;
+    color: $title;
   }
   &__text{
     max-width: 400px;
@@ -271,7 +271,7 @@ footer{
     &.slick-active{
       button{
         background-color: #fff;
-        color: #243f4d;
+        color:$title;
       }
     }
   }
@@ -363,18 +363,15 @@ footer{
     @extend %dmsans-700;
     font-size: 16px;
     color: #8b8b8b;
-    
+    transition: all .3s;
+    &:hover{
+      color: #141414;
+    }
   }
   &__nav-link.products__nav-link--active{
     color: #141414;
   }
   // ------------
-  &__inner{
-    display: grid;
-    grid-template-columns: repeat(4, 280px);
-    grid-gap: 85px 15px;
-    padding-bottom: 185px;
-  }
   &__item{
     margin: 0 auto;
     text-align: center;
@@ -387,7 +384,6 @@ footer{
     min-height: 380px;
     height: 100%;
     padding-bottom: 35px;
-    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     position: relative;
   }
   &__img{
@@ -397,7 +393,7 @@ footer{
     @extend %dmsans-500;
     font-size: 16px;
     line-height: 18px;
-    color: #243f4d;
+    color: $title;
     margin-top: 45px;
     margin-bottom: 10px;
   }
@@ -412,7 +408,7 @@ footer{
   &__list{
     display: grid;
     grid-template-columns: repeat(4, 270px);
-    grid-gap: 40px;
+    grid-gap: 40px 29px;
     padding-bottom: 180px;
   }
   &__item-img{
@@ -421,7 +417,7 @@ footer{
   }
   &__item-text{
     @extend %dmsans-500;
-    color: #243f4d;
+    color: $title;
     font-size: 16px;
     line-height: 18px;
   }
@@ -467,14 +463,142 @@ footer{
 }
 
 
+.about{
+  padding-bottom: 90px;
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+  &__item{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #feefe2;
+    max-height: 390px;
+    height: 100%;
+    padding-bottom: 100px;
+  }
+  &__box-info{
+    max-width: 350px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+  &__title{
+    @extend %dmsans-700;
+    color: $title;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 22px;
+  }
+  &__text{
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $title;
+    margin-bottom: 48px;
+  }
+  &__link{
+    padding: 22px 87px 22px 30px;
+    border: 1px solid #b3b7b5;
+    border-radius: 6px;
+    position: relative;
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    color: #436372;
+    transition: all .3s;
+    &::after{
+      content: '';
+      position: absolute;
+      background-image: url('../images/content/about/arrow-right.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 9px;
+      width: 23px;
+      top: 27px;
+      right: 20px;
+    }
+    &:hover{
+      background-color: #fff;
+    }
+  }
+}
 
+.design{
+  padding-bottom: 120px;
+  &__title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    @extend %dmsans-700;
+    font-size: 36px;
+    color: #1a1a1a;
+  }
+  &__list{
+    display: flex;
+    justify-content: center;
+  }
+  &__item-link{
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: #8b8b8b;
+    transition: all .3s;
+    &:hover{
+      color: #1a1a1a;
+    }
+  }
+  &__item{
+    margin-bottom: 75px;
+  }
+  &__item-link--active{
+    color: #1a1a1a;
+  }
+  &__item + .design__item{
+    margin-left: 30px;
+  }
+  
 
+  &__product-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+  &__product-item{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 245px;
+    span{
+      @extend %dmsans-700;
+      font-size: 16px;
+      color: $default;
+      margin-left: 35px;
+    }
+  }
+  &__product-text{
+    max-width: 200px;
+    @extend %dmsans-700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+    margin-top: 35px;
+    margin-left: 35px;
+    margin-bottom: 12px;
+  }
+}
 
-
-
-
-
-
+.video{
+  background-image: url('../images/content/video/video-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
 
 
 @import 'media';
