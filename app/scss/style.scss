@@ -293,9 +293,6 @@ footer{
     max-width: 320px;
     padding-top: 31px;
   }
-  &__item + .slider-block__item{
-    
-  }
   &__item-first::after{
     content: '';
     position: absolute;
@@ -343,6 +340,136 @@ footer{
     color: #585858;
   }
 }
+
+
+.products{
+  &__wrapper{
+    text-align: center;
+  }
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  &__title{
+    margin-top: 70px;
+    margin-bottom: 35px;
+  }
+  &__nav-item{
+    margin-bottom: 108px;
+  }
+  &__nav-link{
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: #8b8b8b;
+    
+  }
+  &__nav-link.products__nav-link--active{
+    color: #141414;
+  }
+  // ------------
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(4, 280px);
+    grid-gap: 85px 15px;
+    padding-bottom: 185px;
+  }
+  &__item{
+    margin: 0 auto;
+    text-align: center;
+    min-width: 280px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 380px;
+    height: 100%;
+    padding-bottom: 35px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    position: relative;
+  }
+  &__img{
+    display: inline;
+  }
+  &__name{
+    @extend %dmsans-500;
+    font-size: 16px;
+    line-height: 18px;
+    color: #243f4d;
+    margin-top: 45px;
+    margin-bottom: 10px;
+  }
+  &__price{
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 18px;
+    color: $default;
+    padding-bottom: 30px;
+  }
+
+  &__list{
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    grid-gap: 40px;
+    padding-bottom: 180px;
+  }
+  &__item-img{
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  &__item-text{
+    @extend %dmsans-500;
+    color: #243f4d;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  &__item-price{
+    @extend %dmsans-700;
+    color: $default;
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 10px;
+  }
+
+  &__hover-wrapper{
+    opacity: 0;
+    transition: all .3s;
+  }
+  &__item:hover .products__hover-wrapper{
+    opacity: 1;
+  }
+  &__hover-inner{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 140px;
+    left: 56px;
+  }
+  &__hover-img1{
+    padding: 13px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  &__hover-img2{
+    background-color: $default;
+    padding: 13px;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  &__hover-img3{
+    padding: 13px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}
+
+
+
+
+
 
 
 
