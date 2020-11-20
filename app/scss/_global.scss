@@ -30,3 +30,10 @@ a{
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.title{
+  @extend %dmsans-700;
+  color: #141414;
+  font-size: 36px;
+  line-height: 42px;
+}
