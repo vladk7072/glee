@@ -526,6 +526,7 @@ footer{
 }
 
 .design{
+  padding-bottom: 120px;
   &__title{
     display: flex;
     justify-content: center;
@@ -587,7 +588,17 @@ footer{
   }
 }
 
-
+.video{
+  background-image: url('../images/content/video/video-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
 
 
 @import 'media';
