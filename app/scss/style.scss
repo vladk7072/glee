@@ -363,7 +363,10 @@ footer{
     @extend %dmsans-700;
     font-size: 16px;
     color: #8b8b8b;
-    
+    transition: all .3s;
+    &:hover{
+      color: #141414;
+    }
   }
   &__nav-link.products__nav-link--active{
     color: #141414;
@@ -522,8 +525,67 @@ footer{
   }
 }
 
+.design{
+  &__title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    @extend %dmsans-700;
+    font-size: 36px;
+    color: #1a1a1a;
+  }
+  &__list{
+    display: flex;
+    justify-content: center;
+  }
+  &__item-link{
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: #8b8b8b;
+    transition: all .3s;
+    &:hover{
+      color: #1a1a1a;
+    }
+  }
+  &__item{
+    margin-bottom: 75px;
+  }
+  &__item-link--active{
+    color: #1a1a1a;
+  }
+  &__item + .design__item{
+    margin-left: 30px;
+  }
+  
 
-
+  &__product-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+  &__product-item{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 245px;
+    span{
+      @extend %dmsans-700;
+      font-size: 16px;
+      color: $default;
+      margin-left: 35px;
+    }
+  }
+  &__product-text{
+    max-width: 200px;
+    @extend %dmsans-700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+    margin-top: 35px;
+    margin-left: 35px;
+    margin-bottom: 12px;
+  }
+}
 
 
 
