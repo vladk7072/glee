@@ -174,10 +174,14 @@ footer{
     font-size: 14px;
     line-height: 32px;
     color: #234969;
+    cursor: default;
   }
   &__items{
     display: flex;
     justify-content: space-between;
+  }
+  &__item{
+    max-width: 270px;
   }
   &__item + .footer-bottom__item{
     margin-left: 30px;
@@ -288,10 +292,10 @@ footer{
   &__item{
     padding-left: 80px;
     position: relative;
-    // margin: 45px 0;
     height: 170px;
     max-width: 320px;
     padding-top: 31px;
+    cursor: default;
   }
   &__item-first::after{
     content: '';
@@ -355,6 +359,7 @@ footer{
   &__title{
     margin-top: 70px;
     margin-bottom: 35px;
+    cursor: default;
   }
   &__nav-item{
     margin-bottom: 108px;
@@ -385,26 +390,8 @@ footer{
     height: 100%;
     padding-bottom: 35px;
     position: relative;
+    border-radius: 5px;
   }
-  &__img{
-    display: inline;
-  }
-  &__name{
-    @extend %dmsans-500;
-    font-size: 16px;
-    line-height: 18px;
-    color: $title;
-    margin-top: 45px;
-    margin-bottom: 10px;
-  }
-  &__price{
-    @extend %dmsans-700;
-    font-size: 16px;
-    line-height: 18px;
-    color: $default;
-    padding-bottom: 30px;
-  }
-
   &__list{
     display: grid;
     grid-template-columns: repeat(4, 270px);
@@ -420,6 +407,7 @@ footer{
     color: $title;
     font-size: 16px;
     line-height: 18px;
+    cursor: default;
   }
   &__item-price{
     @extend %dmsans-700;
@@ -427,8 +415,8 @@ footer{
     font-size: 16px;
     line-height: 18px;
     margin-top: 10px;
+    cursor: default;
   }
-
   &__hover-wrapper{
     opacity: 0;
     transition: all .3s;
@@ -490,6 +478,7 @@ footer{
     font-size: 26px;
     line-height: 32px;
     margin-bottom: 22px;
+    cursor: default;
   }
   &__text{
     @extend %rubik-400;
@@ -497,6 +486,7 @@ footer{
     line-height: 30px;
     color: $title;
     margin-bottom: 48px;
+    cursor: default;
   }
   &__link{
     padding: 22px 87px 22px 30px;
@@ -534,6 +524,7 @@ footer{
     @extend %dmsans-700;
     font-size: 36px;
     color: #1a1a1a;
+    cursor: default;
   }
   &__list{
     display: flex;
@@ -544,6 +535,7 @@ footer{
     font-size: 16px;
     color: #8b8b8b;
     transition: all .3s;
+    
     &:hover{
       color: #1a1a1a;
     }
@@ -568,13 +560,15 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 245px;
+    min-height: 245px;
+    border-radius: 5px;
     span{
       @extend %dmsans-700;
       font-size: 16px;
       color: $default;
       margin-left: 35px;
-    }
+      cursor: default;
+    } 
   }
   &__product-text{
     max-width: 200px;
@@ -585,6 +579,7 @@ footer{
     margin-top: 35px;
     margin-left: 35px;
     margin-bottom: 12px;
+    cursor: default;
   }
 }
 
@@ -600,5 +595,117 @@ footer{
   margin-bottom: 100px;
 }
 
+.idea{
+  &__box-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+  &__title{
+    @extend %dmsans-700;
+    color: #1a1a1a;
+    font-size: 36px;
+    line-height: 40px;
+    cursor: default;
+  }
+  &__title-link{
+    padding-right: 23px;
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #262626;
+    position: relative;
+    margin-right: 11px;
+    &::after{
+      content: '';
+      position: absolute;
+      background-image: url('../images/content/idea/arrow-right.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      height: 11px;
+      width: 6px;
+      right: 0;
+      top: 4.5px;
+    }
+  }
 
-@import 'media';
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -180px;
+  }
+  &__item{
+    min-height: 420px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: default;
+  }
+  &__item-img{
+    max-width: 370px;
+    width: 100%;
+  }
+  &__item-wrapper{
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 32px;
+    position: relative;
+  }
+  &__item-subtext{
+    position: absolute;
+    top: -19px;
+    padding: 10px 31px;
+    background-color: $default;
+    color: #fff;
+    border-radius: 50px;
+  }
+  &__item-text{
+    min-height: 65px;
+    max-width: 315px;
+    @extend %dmsans-500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #262626;
+    margin-top: 35px;
+    padding-bottom: 5px;
+  }
+  &__item-databox{
+    display: flex;
+    @extend %rubik-400;
+    font-size: 12px;
+    color: #222933;
+    padding: 22px 0;
+    border-top: 1px solid #e0e0e0;
+  }
+  &__item-data{
+    margin-right: 30px;
+  }
+}
+
+
+.partners{
+  background-color: #fef7f0;
+  padding-top: 260px;
+  padding-bottom: 90px;
+  &__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item{
+    min-height: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__item + .partners__item{
+    padding-left: 95px;
+  }
+}
+
+
+@import 'media';  
