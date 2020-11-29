@@ -283,7 +283,7 @@ footer{
       content: "/";
       position: absolute;
       color: #979ba0;
-      top: 3px;
+      top: 1px;
       right: 6px;
     }
     &:last-child{
@@ -617,10 +617,38 @@ footer{
   }
 }
 
-// padding: 10px;
-    // background-color: #f6f6f6;
-    // border-radius: 50px;
-
+.information{
+  padding-top: 110px;
+  &__title{
+    @extend %rubik-500;
+      font-size: 24px;
+      line-height: 28px;
+      color: $title;
+      margin-bottom: 20px;
+  }
+  &__list{
+    margin-bottom: 50px;
+    margin-left: 28px;
+    list-style: decimal-leading-zero;
+  }
+  &__item{
+      @extend %rubik-400;
+      font-size: 16px;
+      line-height: 26px;
+      color: $title;
+      margin-bottom: 15px;
+  }
+  &__text{
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $title;
+    margin-bottom: 50px;
+  }
+  &__text-last{
+    margin-bottom: 110px;
+  }
+}
 
 .slick-dots{
   display: flex;
