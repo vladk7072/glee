@@ -37,3 +37,58 @@ a{
   font-size: 36px;
   line-height: 42px;
 }
+
+.filter-title{
+  text-transform: uppercase;
+  @extend %dmsans-700;
+  font-size: 18px;
+  margin-bottom: 35px;
+  color: $title;
+  position: relative;
+  cursor: default;
+  & + .filter-title{
+    padding-top: 50px;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    background-image: url('../images/icons/filter-line-decor.svg');
+    height: 2px;
+    width: 38px;
+    right: 0;
+    top: 8px;
+  }
+}
+.filter-item + .filter-item{
+  margin-top: 50px;
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  &__list{
+    display: flex;
+  }
+  &__item + .pagination__item{
+    margin-left: 15px;
+  }
+  &__link{
+    padding: 14px 20px;
+    color: $title;
+    transition: all .3s;
+    border: 1px solid $default;
+    @extend %rubik-400;
+    font-size: 16px;
+    &:hover{
+      color: #fff;
+      background-color: $default;
+    }
+  }
+}
+.shop-content2 .pagination{
+  margin-top: 0px;
+  justify-content: flex-start;
+}
+
