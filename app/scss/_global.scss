@@ -87,6 +87,10 @@ a{
     }
   }
 }
+.pagination--active{
+  color: #fff;
+  background-color: $default;
+}
 .shop-content2 .pagination{
   margin-top: 0px;
   justify-content: flex-start;
