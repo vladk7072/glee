@@ -1251,6 +1251,7 @@ footer {
     @extend %rubik-400;
     font-size: 15px;
     color: #333;
+    cursor: default;
   }
 }
 .jq-ry-container {
@@ -1648,10 +1649,13 @@ footer {
     bottom: 0;
     padding: 30px 26px;
     background-color: $default;
+    // display: flex;
+    // justify-content: space-between;
+    // max-width: 275px;
     display: flex;
-    justify-content: space-between;
-    max-width: 275px;
-    width: 100%;
+  }
+  &__subtitle-data{
+    margin-right: 25px;
   }
   &__subtitle-data,
   &__subtitle-admin{
@@ -1747,6 +1751,9 @@ footer {
     @extend %rubik-400;
     font-size: 16px;
     color: $title;
+    &:focus{
+      outline-color: $default;
+    }
   }
   &__btn{
     padding: 0;
@@ -1808,6 +1815,283 @@ footer {
   }
 }
 
+.blog-details{
+  padding: 120px 0;
+  &__subtext{
+    @extend %rubik-500;
+    font-size: 16px;
+    line-height: 28px;
+    color: $title;
+    margin-bottom: 15px;
+  }
+  &__quote{
+    margin: 35px 0 45px;
+    padding: 42px 15px;
+    background-color: #edf1f4;
+    border-left: 6px solid $default;
+    @extend %rubik-400;
+    font-size: 16px;
+  }
+  &__quote-text{
+    margin-bottom: 15px;
+  }
+  &__quote-author{
+    padding-left: 45px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 4px;
+      background-color: $default;
+      left: 0;
+      top: 7px;
+    }
+  }
+  &__info-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  &__info-img{
+    width: 322px;
+    height: 210px;
+    object-fit: cover;
+    margin-right: 30px;
+  }
+  &__info-title{
+    margin-bottom: 15px;
+    @extend %rubik-500;
+    font-size: 18px;
+    line-height: 24px;
+    color: $title;
+  }
+  &__info-text{
+    @extend %rubik-400;
+    font-size: 16px;
+    color: #565872;
+    line-height: 26px;
+  }
+  &__info-text--last{
+    margin-bottom: 55px;
+  }
+}
+.blog-designer{
+  padding: 25px 0;
+  border-top: 2px solid #ebebeb;
+  border-bottom: 2px solid #ebebeb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__info{
+    display: flex;
+    align-items: center;
+  }
+  &__img{
+    margin-right: 25px;
+    height: 76px;
+    width: 76px;
+    object-fit: cover;
+  }
+  &__name{
+    @extend %rubik-500;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+    cursor: default;
+  }
+  &__profession{
+    @extend %rubik-400;
+    font-size: 16px;
+    color: #b6b6b6;
+    cursor: default;
+  }
+  &__connect-share{
+    display: flex;
+    align-items: center;
+    cursor: default;
+  }
+  &__connect-title{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px;
+    @extend %rubik-400;
+    font-size: 16px;
+    color: #333;
+    cursor: default;
+  }
+  &__connect-tags{
+    margin-bottom: 10px;
+  }
+  &__connect-tag{
+    @extend %rubik-400;
+    font-size: 16px;
+    color: #999;
+    cursor: pointer ;
+  }
+  &__connect-social + .blog-designer__connect-social{
+    margin-left: 20px;
+  }
+}
+
+.comments{
+  &__title{
+    margin: 60px 0 25px;
+    @extend %rubik-400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #436372;
+    cursor: default;
+  }
+  &__item{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+  }
+  &__img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 30px;
+  }
+  &__title-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__name{
+    @extend %rubik-700;
+    color: #436372;
+    font-size: 16px;
+    cursor: default;
+  }
+  &__date{
+    @extend %rubik-400;
+    font-size: 14px;
+    color: #9d9d9d;
+  }
+  &__text{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #565872;
+    cursor: default;
+  }
+  &__link{
+    @extend %rubik-400;
+    font-size: 16px;
+    color: #526278;
+    padding-right: 20px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      background-image: url('../images/content/comments/arrow-right.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 14px;
+      width: 13px;
+      right: 0;
+      top: 3px;
+    }
+  }
+  &__item--line{
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    margin-left: 131px;
+  }
+}
+.comments-form{
+  &__box{
+    margin-top: 42px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__label-name{
+    display: flex;
+  }
+  &__input-name{
+    border: 1px solid #e5e5e5;
+    border-right: none;
+    padding: 14px 20px;
+    width: 346px;
+    @extend %rubik-400;
+    font-size: 16px;
+    color: #4c4c4c;
+    &:focus{
+      outline-color: $default;
+    }
+    &::placeholder{
+      @extend %rubik-400;
+      font-size: 16px;
+      color: #999;
+    }
+  }
+  &__input-img{
+    border: 1px solid #e5e5e5;
+    border-left: none;
+    padding: 0 19px;
+  }
+  &__input-email{
+    border: 1px solid #e5e5e5;
+    border-right: none;
+    padding: 14px 20px;
+    width: 340px;
+    @extend %rubik-400;
+    font-size: 16px;
+    color: #4c4c4c;
+    &:focus{
+      outline-color: $default;
+    }
+    &::placeholder{
+      @extend %rubik-400;
+      font-size: 16px;
+      color: #999;
+    }
+  }
+  &__input-textarea{
+    border: 1px solid #e5e5e5;
+    border-right: none;
+    padding: 14px 20px;
+    height: 120px;
+    resize: none;
+    width: 100%;
+    margin-bottom: 40px;
+    @extend %rubik-400;
+    font-size: 16px;
+    color: #4c4c4c;
+    &:focus{
+      outline-color: $default;
+    }
+    &::placeholder{
+      @extend %rubik-400;
+      font-size: 16px;
+      color: #999;
+    }
+  }
+  &__text-img{
+    border: 1px solid #e5e5e5;
+    border-left: none;
+    padding: 19px 19px 85px;
+    display: flex;
+    align-self: flex-start;
+  }
+  &__btn{
+    border: none;
+    padding: 0;
+    background-color: $default;
+    color: #fff;
+    padding: 16px 35px;
+    @extend %rubik-400;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
 
 
 @import "media";
